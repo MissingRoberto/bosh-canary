@@ -1,0 +1,24 @@
+
+director_uuid: (( merge ))
+
+name: canary-release-deployment
+
+releases:
+  - name: canary-release
+    version: latest
+
+properties: (( merge ))
+
+networks: (( merge ))
+
+jobs: (( merge ))
+
+resource_pools: (( merge ))
+
+compilation:
+  workers: 2
+  network: (( merge ))
+  reuse_compilation_vms: true
+  cloud_properties: (( merge ))
+
+update: (( merge ))

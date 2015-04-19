@@ -1,0 +1,33 @@
+---
+packages:
+- name: apache2
+  version: 008bf6a1e36608de4deba62d40e22eee03a12cbc
+  fingerprint: 008bf6a1e36608de4deba62d40e22eee03a12cbc
+  sha1: 9b01e90759792ab132e3ce486f3de510996f07aa
+  dependencies: []
+- name: mysql
+  version: d247f12e3a160e477c976ffcff6174499cc6ba39
+  fingerprint: d247f12e3a160e477c976ffcff6174499cc6ba39
+  sha1: e2b93666807df1896d3da493f086d633067dc03e
+  dependencies: []
+- name: mysqlclient
+  version: 28f828e0817c1b80a3f18283e3260029bace988f
+  fingerprint: 28f828e0817c1b80a3f18283e3260029bace988f
+  sha1: fa5237b00b4dc1a6f5cef6e61a59b427599e2e7b
+  dependencies: []
+- name: php5
+  version: 2455ce8d83ae5c6f6275590888ad425579b8ce1a
+  fingerprint: 2455ce8d83ae5c6f6275590888ad425579b8ce1a
+  sha1: 0739227c7523842cc44353f6100f50d068502548
+  dependencies:
+  - apache2
+  - mysqlclient
+jobs:
+- name: mysql
+  version: f698175d7da656ab92bbe1b69d5dbaed61d04123
+  fingerprint: f698175d7da656ab92bbe1b69d5dbaed61d04123
+  sha1: 99c019e42464b675e45860aab08d7d15310154ee
+commit_hash: '00000000'
+uncommitted_changes: false
+name: hello_canary
+version: 0+dev.1

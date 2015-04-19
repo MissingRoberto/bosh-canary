@@ -1,0 +1,6 @@
+---
+name: php5
+dependencies: []
+files:
+- apt/php5/profile.sh
+- apt/php5/*.deb

@@ -1,0 +1,6 @@
+---
+name: apache2
+dependencies: []
+files:
+- apt/apache2/profile.sh
+- apt/apache2/*.deb

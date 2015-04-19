@@ -1,0 +1,5 @@
+jobs:
+  - name: canary-ui
+    networks:
+      - name: canary_network
+        static_ips: ~

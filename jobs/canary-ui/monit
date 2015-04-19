@@ -1,0 +1,5 @@
+check process hello_canary
+  with pidfile /var/vcap/sys/run/hello_canary/pid
+  start program "/var/vcap/jobs/hello_canary/bin/ctl start"
+  stop program "/var/vcap/jobs/hello_canary/bin/ctl stop"
+  group vcap

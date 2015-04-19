@@ -1,0 +1,4 @@
+compilation:
+  network: default
+  cloud_properties:
+    name: random

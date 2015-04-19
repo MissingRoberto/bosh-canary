@@ -1,0 +1,48 @@
+#!/bin/bash
+
+set -e
+
+install_apt_packages(){
+	packages=$*
+	release=$(dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) )
+
+	vagrant up
+	for p in $packages
+	do
+	    bosh-gen package $p --apt
+	    vagrant ssh -c "/vagrant/src/apt/fetch_debs.sh $p"
+	done
+
+	bosh sync blobs
+	#bosh upload blobs
+	
+	
+}
+
+uninstall_apt_packages(){
+	release=$(dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) )
+	blobs=$release/blobs/apt
+	packages=$release/packages
+	pushd $blobs
+		rm -r $*
+	popd
+
+	pushd $packages
+		rm -r $*
+	popd
+
+	bosh sync blobs
+}
+
+cmd=$1
+shift 
+
+if [[ "$cmd" == "install" ]];then
+	install_apt_packages $*
+
+elif [[ "$cmd" == "remove" ]];then
+	uninstall_apt_packages $*
+else
+	echo "ERROR: option $cmd not found. Available options: install and remove" 1>&2 
+	exit 1
+fi

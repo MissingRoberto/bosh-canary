@@ -1,0 +1,11 @@
+
+jobs:
+  - name: canary-ui
+    templates: 
+      name: canary-ui
+      release: canary-release
+    instances: 2
+    resource_pool: small_z1
+    networks: (( merge ))
+    persistent_disk: 0
+    update: (( merge || null ))

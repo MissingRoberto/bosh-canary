@@ -1,0 +1,14 @@
+---
+name: canary-ui
+
+templates:
+  ctl: bin/ctl
+  index.html.erb: content/index.php
+
+packages:
+  - apache2
+
+properties:
+  canary.version:
+    description: Version of the Hello Canary
+    default: 5

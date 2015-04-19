@@ -1,0 +1,14 @@
+properties:
+  canary-ui:
+    deployment:
+      description: Version of the deployment
+      default: Stable
+    admin:
+      description: "username"
+      default: admin
+    servername:
+      description: "username"
+      default: localhost
+    port:
+      description: "username"
+      default: localhost:80

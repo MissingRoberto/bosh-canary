@@ -1,0 +1,5 @@
+resource_pools:
+  - name: small_z1
+    network: default
+    cloud_properties:
+      name: random
